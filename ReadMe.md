@@ -1,4 +1,4 @@
-Ojemann
+I'm Alex Ojemann.
 This repository contains my homework and labs for the class APPM4600 at CU Boulder.
 The Homework folder contains the python code I used in each homework assignment.
 The deliverables for the homework assignments are documents with answers to the questions, which are included here.
