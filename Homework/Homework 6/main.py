@@ -40,14 +40,14 @@ def driver():
     print('Broyden: number of iterations is:', its)
 
 
-def evalF1(x):
+def evalF(x):
     F = np.zeros(2)
     F[0] = x[0]**2 + x[1]**2 - 4
     F[1] = math.exp(x[0]) + x[1] - 1
     return F
 
 
-def evalJ1(x):
+def evalJ(x):
     J = np.array([[2*x[0], 2*x[1]],
                   [math.exp(x[0]),1]])
     return J
