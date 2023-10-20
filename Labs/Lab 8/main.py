@@ -84,7 +84,6 @@ def eval_lin_spline(xeval, Neval, a, b, f, Nint):
 import numpy as np
 
 
-#This has verry bizarre behavior around 0
 def eval_cubic_spline(xeval, Neval, a, b, f, Nint):
     xint = np.linspace(a, b, Nint + 1)
     yeval = np.zeros(Neval)
@@ -116,7 +115,7 @@ def eval_cubic_spline(xeval, Neval, a, b, f, Nint):
 
 
         for kk in range(len(ind)):
-            yeval[ind[kk]] = (((b1 - xeval[ind[kk]])**3)*coeffs[0])/(6*h) + (((xeval[ind[kk]] - a1)**3)*coeffs[1])/(6*h) + C*(b1 - 1) + D*(xeval[ind[kk]] - a1)
+            yeval[ind[kk]] = (((b1 - xeval[ind[kk]])**3)*coeffs[0])/(6*h) + (((xeval[ind[kk]] - a1)**3)*coeffs[1])/(6*h) + C*(b1 - xeval[ind[kk]]) + D*(xeval[ind[kk]] - a1)
 
     return yeval
 
